@@ -21,7 +21,7 @@ public class DQRulePage extends DQRulepageElements {
 
 
 
-    String RuleName;
+//    String RuleName;
     public void enterIntodqRule(String strName)
     {
         try {
@@ -47,6 +47,7 @@ public class DQRulePage extends DQRulepageElements {
     public void selectSource()
     {
 
+        reusableUtils.waitUtillElementIsVisible(databasesource);
         databasesource.click();
 
     }
@@ -96,8 +97,7 @@ public class DQRulePage extends DQRulepageElements {
 
     public void selectColumns(String column)
     {
-        reusableUtils.shortWait();
-       reusableUtils.scrollToElement(listColumns.get(0));
+      reusableUtils.waitUtillElementIsVisible(listColumns.get(0));
         reusableUtils.shortWait();
         for(int i=0;i<listColumns.size();i++)
         {
@@ -175,14 +175,14 @@ public class DQRulePage extends DQRulepageElements {
 
     }
 
-    public void dqruleName(String rulename)
+    public String dqruleName(String rulename)
     {
         Random rand=new Random();
         int randomInRange = rand.nextInt(100);
         String strRuleName=rulename+randomInRange;
-        RuleName=strRuleName;
-
         reusableUtils.updateElementValue(dqrulename,strRuleName);
+        System.out.println(strRuleName);
+        return strRuleName;
 
 
     }
@@ -193,12 +193,14 @@ public class DQRulePage extends DQRulepageElements {
 
     }
 
-    public void validatingDQRulename(){
+    public void validatingDQRulename(String strRuleName){
         boolean value =false;
         for(int i=0;i<lstDQRulenameColumn.size();i++)
         {
-            if(lstDQRulenameColumn.get(i).getText().equalsIgnoreCase(RuleName)) {
+            if(lstDQRulenameColumn.get(i).getText().equalsIgnoreCase(strRuleName)) {
+
                 value=true;
+                System.out.println(strRuleName);
 
             }
         }

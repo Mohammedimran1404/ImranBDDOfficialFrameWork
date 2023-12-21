@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import DriverManagers.ConfigFileManager;
+import Enums.Context;
 import Pages.DQRulePage;
 import Utilities.DriverUtilis;
 import io.cucumber.java.en.And;
@@ -28,15 +29,16 @@ public class DQRuleStepDef {
     }
     @And("Enter the valid Credentials for accessing DQG")
     public void enter_the_valid_credentials_for_accessing_dqg() throws InterruptedException {
-
         dqRulePage.enterValidCredentials();
     }
     @And("Click on Sign button")
     public void click_on_sign_button() {
+
         dqRulePage.signin();
     }
     @And("Enter into {string} module")
     public void enter_into_module(String string) {
+
         dqRulePage.enterIntodqRule(string);
     }
     @And("Create rule by selecting Database")
@@ -63,7 +65,8 @@ public class DQRuleStepDef {
     }
     @When("Click on the Columns Text")
     public void click_on_the_columns_text() {
-      dqRulePage.columntext();
+
+        dqRulePage.columntext();
     }
     @And("Validate the columns are displayed")
     public void validate_the_columns_are_displayed() {
@@ -71,6 +74,7 @@ public class DQRuleStepDef {
     }
     @And("Select {string} from Column name in Table")
     public void select_from_column_name_in_table(String string) {
+
         dqRulePage.selectColumns(string);
     }
     @And("Validate select data quality checks is visible")
@@ -99,7 +103,7 @@ public class DQRuleStepDef {
     }
     @And("Update {string} in DQ Rule name field")
     public void update_in_dq_rule_name_field(String string) {
-        dqRulePage.dqruleName(string);
+        driverUtilis.getScenarioContext().setContext(Context.DQ_RULENAME,dqRulePage.dqruleName(string));
     }
     @And("Click on Create button")
     public void click_on_create_button() {
@@ -107,7 +111,9 @@ public class DQRuleStepDef {
     }
     @Then("Validate DQ rule name is updated in the Data Quality module")
     public void validate_dq_rule_name_is_updated_in_the_data_quality_module() {
-       dqRulePage.validatingDQRulename();
+        String strDqRuleName=driverUtilis.getScenarioContext().getContext(Context.DQ_RULENAME).toString();
+       dqRulePage.validatingDQRulename(strDqRuleName);
+        System.out.println(strDqRuleName);
     }
     @And("Close the DQG Application")
     public void close_the_dqg_application() {

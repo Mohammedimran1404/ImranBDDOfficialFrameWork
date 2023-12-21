@@ -1,11 +1,11 @@
 Feature: As a user i want to validate Data Quality Rules
   Background:
     Given Launch DQG Application
-
-  @DataQualityRule
-  Scenario: Verify the user able to create a New Rule in Data Quality Rules
     And Enter the valid Credentials for accessing DQG
     And Click on Sign button
+
+  @Regression @DataQualityRule
+  Scenario: Verify the user able to create a New Rule in Data Quality Rules
     And Enter into "Data Quality Rules" module
     And Create rule by selecting Database
     And Select Data Source List
@@ -24,12 +24,10 @@ Feature: As a user i want to validate Data Quality Rules
     And Update "Postgres DQRule" in DQ Rule name field
     And Click on Create button
     Then Validate DQ rule name is updated in the Data Quality module
-    And Close the DQG Application
 
-
-#  @DataQualityRule
-#  Scenario: Verify the user able to create a old Rule in Data Quality Rules
-#    And Enter the valid Credentials for accessing DQG
-#    And Click on Sign button
-#    And Enter into "Data Quality Rules" module
-#    And Create rule by selecting Database
+  @Regression @DataQualityRule
+  Scenario: Verify the user able to create a old Rule in Data Quality Rules
+    And Enter into "Data Quality Rules" module
+    And Create rule by selecting Database
+    And Select Data Source List
+    And Click on Next button

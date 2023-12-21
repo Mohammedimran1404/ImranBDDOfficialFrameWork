@@ -24,6 +24,6 @@ public class DriverUtilis {
         return basePage;
     }
     public ScenarioContext getScenarioContext() {
-        return getScenarioContext();
+        return scenarioContext;
     }
 }

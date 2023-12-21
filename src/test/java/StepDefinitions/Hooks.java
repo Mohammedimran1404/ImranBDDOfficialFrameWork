@@ -51,6 +51,6 @@ public class Hooks {
         {
             log.info(scenario.getName()+"Scenario is passed");
         }
-       // driverUtilis.getDriverManager().closeDriver();
+        driverUtilis.getDriverManager().closeDriver();
     }
 }
