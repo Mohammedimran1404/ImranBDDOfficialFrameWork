@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = "src/test/resources/Features",
+        features = "@target/rerun.txt",
         glue = "StepDefinitions",
         tags="",
         plugin = {

@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="93f43cb5-9c0e-4f71-9b20-733c5df14347" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DriverManagers/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DriverManagers/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestExecutor/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestExecutor/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestExecutor/TestRunnerRerun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestExecutor/TestRunnerRerun.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,9 +44,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.TestRunner.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ImranMohd-Kairos/Downloads",
+    "last_opened_file_path": "C:/Users/ImranMohd-Kairos/OneDrive - Kairos Technologies Inc/desktop/UpdatedCucumber/ImranBDDOfficialFrameWork",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
@@ -148,14 +151,6 @@
         <item itemvalue="TestNG.TestRunner (2)" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-11.0.21-corretto-11.0.21-249ae16d76d6-d0fa0211" />
-        <option value="jdk-17.0.9-corretto-17.0.9-249ae16d76d6-98297cd8" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

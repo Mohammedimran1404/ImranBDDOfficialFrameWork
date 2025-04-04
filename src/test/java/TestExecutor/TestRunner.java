@@ -16,9 +16,12 @@ import org.testng.annotations.DataProvider;
                 "json:target/cucumber-reports/cucumber-json-report.json",
                 "timeline:target/test-output-thread/",
                 "junit:target/cucumber-reports/cucumber-junit-report.xml",
-                "html:target/cucumber-reports/cucumber-pretty"
-        }
+                "html:target/cucumber-reports/cucumber-pretty",
+                "rerun:target/rerun.txt"}
+
 )
+// to run the features using maven use this command
+// mvn clean test -Ddataproviderthreadcount=3 -Dcucumber.filter.tags="@tagname"
 public class TestRunner  extends AbstractTestNGCucumberTests {
 
     @Override
@@ -39,3 +42,5 @@ public class TestRunner  extends AbstractTestNGCucumberTests {
     }
 
 }
+
+
